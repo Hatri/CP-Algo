@@ -23,3 +23,15 @@ def RomanToArabic(Roman):
         else:
             value += m[Roman[i]]
         print(value)
+
+
+def main():
+    for s in sys.stdin:
+        s = s.strip('\n')
+        if s.isdigit():
+            ArabicToRoman(s)
+        else:
+            RomanToArabic(s)
+
+
+main()
