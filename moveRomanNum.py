@@ -10,3 +10,16 @@ def ArabicToRoman(Arabic):
             print(roman, end='')
             Arabic -= value
         print()
+
+
+def RomanToArabic(Roman):
+    m = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    value = 0
+    for i in range(len(Roman)):
+        if i+1 < len(Roman) and m[Roman[i]] < m[Roman[i+1]]:
+            value += m[Roman[i+1]] - m[Roman[i]]
+        elif i-1 >= 0 and m[Roman[i-1]] < m[Roman[i]]:
+            continue
+        else:
+            value += m[Roman[i]]
+        print(value)
