@@ -1,4 +1,7 @@
 import java.util.*;
+
+import jdk.internal.org.jline.utils.InputStreamReader;
+
 import java.io.*;
 
 class Main {
@@ -62,6 +65,22 @@ class Main {
             } else
                 answer += value(roman.charAt(i));
         pw.printf("%d\n", answer);
+    }
+
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        pw = new PrinterWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
+
+        while (true) {
+            String str = br.readLine();
+            if (str == null)
+                break;
+            if (Character.isDigit(str.charAt(0)))
+                ArabicToRoman(Integer.parseInt(str)); // Arabic to Roman numerals
+            else
+                RomanToArabic(str); // Roman to Arabic numerals
+        }
+        pw.close();
     }
 
 }
