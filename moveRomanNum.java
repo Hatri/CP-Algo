@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 class Main {
-    private static PrinterWriter pw;
+    private static PrintWriter pw;
 
     private static void ArabicToRoman(int arabic) {
         // process from larger value to smaller value
@@ -20,5 +20,16 @@ class Main {
         cvt.put(5, "V");
         cvt.put(4, "IV");
         cvt.put(1, "I");
+
+        Set keys = cvt.keySet();
+        for (Iterator i = keys.iterator(); i.hasNext();) {
+            Integer key = (Integer) i.next();
+            String value = (String) cvt.get(key);
+            while (arabic >= key) {
+                pw.print(value);
+                arabic -= key;
+            }
+        }
+        pw.printf("\n");
     }
 }
