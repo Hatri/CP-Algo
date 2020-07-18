@@ -53,4 +53,15 @@ class Main {
         return 0;
     }
 
+    private static void RomanToArabic(String roman) {
+        int answer = 0;
+        for (int i = 0; i < roman.length(); ++i)
+            if ((i + 1 < roman.length()) && value(roman.charAt(i)) < value(roman.charAt(i + 1))) {
+                answer += value(roman.charAt(i + 1)) - value(roman.charAt(i));
+                ++i;
+            } else
+                answer += value(roman.charAt(i));
+        pw.printf("%d\n", answer);
+    }
+
 }
