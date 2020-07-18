@@ -54,3 +54,16 @@ void RomanToArabic(string roman)
             ans += value(roman[i]);
     cout << ans << "\n";
 }
+
+int main()
+{
+    string S;
+    while (getline(cin, S))
+    {
+        if (isdigit(S[0]))
+            ArabicToRoman(stoi(S));
+        else
+            RomanToArabic(S);
+    }
+    return 0;
+}
