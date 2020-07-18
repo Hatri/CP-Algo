@@ -69,7 +69,7 @@ class Main {
 
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        pw = new PrinterWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
+        pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
 
         while (true) {
             String str = br.readLine();
