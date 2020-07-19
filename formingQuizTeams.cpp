@@ -35,5 +35,14 @@ int main()
     {
         for (i = 0; i < 2 * N; i++)
             sscanf(gets(line), "%s %d %d", &name, &x[i], &y[i]);
+
+        for (i = 0; i < 2 * N; i++) // build pairwise distance table
+            for (j = 0; j < 2 * N; j++)
+                dist[i][j] = sqrt((double)(x[i] - x[j]) * (x[i] - x[j]) + (y[i] - y[j]) * (y[i] - y[j]));
+
+        //using DP to solve matching general graph
+        memset(memo, -1, sizeof memo);
+        printf("Case %d: %.21f\n", caseNo++, matching(0));
     }
+    return 0;
 }
