@@ -31,6 +31,7 @@ int main()
 {
     char line[1000], name[1000];
     int i, j, caseNo = 1, x[20], y[20];
+    //freopen("Example.txt", "r", stdin); // Uncommet for simplify testing.
     while (sscanf(gets(line), "%d", &N), N)
     {
         for (i = 0; i < 2 * N; i++)
