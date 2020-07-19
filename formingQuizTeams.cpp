@@ -26,3 +26,14 @@ double matching(int bit_mask)
         }
     return memo[bit_mask] = matching_value;
 }
+
+int main()
+{
+    char line[1000], name[1000];
+    int i, j, caseNo = 1, x[20], y[20];
+    while (sscanf(gets(line), "%d", &N), N)
+    {
+        for (i = 0; i < 2 * N; i++)
+            sscanf(gets(line), "%s %d %d", &name, &x[i], &y[i]);
+    }
+}
