@@ -13,4 +13,16 @@ double matching(int bit_mask)
         return memo[bit_mask];
     if (bit_mask == (1 << 2 * N) - 1) // all are matched
         return memo[bit_mask] = 0;
+
+    double matching_value = 32767 * 32767; // initialize with large value
+    for (int p1 = 0; p1 < 2 * N; p1++)
+        if (!(bit_mask & (1 << p1)))
+        { // if this bit is off
+            for (int p2 = p1 + 1; p2 < 2 * N; p2++)
+                if (!(bit_mask & (1 << p2))) // if this different bit is also off
+                    matching_value = min(matching_value,
+                                         dist[p1][p2] + matching(bit_mask | (1 << p1) | (1 << p2)));
+            break; // this breaks helps reducing time complexity to 0((2N)) * 2^(2N))
+        }
+    return memo[bit_mask] = matching_value;
 }
