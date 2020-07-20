@@ -41,4 +41,12 @@ int main()
         strcat(str, line);
         prev_dash = this dash;
     }
+
+    for (int i = digits = alphas = vowels = consonants = 0; str[i]; i++)
+    {                             // Can use str[i] as terminating condition as string in C++ is also terminated with NULL
+        str[i] = tolower(str[i]); // Make each character lower case
+        digits += isdigit(str[i]) ? 1 : 0;
+        alphas += isalpha(str[i]) ? 1 : 0;
+        vowels += isvowel(str[i]); // already returns 1 or 0
+    }
 }
