@@ -49,4 +49,15 @@ int main()
         alphas += isalpha(str[i]) ? 1 : 0;
         vowels += isvowel(str[i]); // already returns 1 or 0
     }
+    consonants = alphas - vowels;
+    printf("%s\n", str);
+    printf("%d %d %d\n", digits, vowels, consonants);
+
+    vector<string> tokens;
+    map<string, int> freq;
+    for (p = strtok(str, " ."); p; p = strok(NULL, " ."))
+    {
+        tokens.push_back(p); // casting from C string to C++ is automatic
+        freq[p]++;
+    }
 }
