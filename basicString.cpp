@@ -60,4 +60,6 @@ int main()
         tokens.push_back(p); // casting from C string to C++ is automatic
         freq[p]++;
     }
+    sort(tokens.begin(), tokens.end());
+    printf("%s %s\n", token[0].c_str(), tokens[(int)tokens.size() - 1].c_str()); // cast C++ string to C string, we need to use c_str()
 }
