@@ -62,4 +62,22 @@ int main()
     }
     sort(tokens.begin(), tokens.end());
     printf("%s %s\n", token[0].c_str(), tokens[(int)tokens.size() - 1].c_str()); // cast C++ string to C string, we need to use c_str()
+
+    int hascs3233 = (strstr(str, "cs3233") != NULL);
+    printf("%d\n", hascs3233);
+
+    int ans_s = 0, ans_h = 0, ans_7 = 0;
+    char ch;
+    while (scanf("%c", &ch), ch != '\n')
+    {
+        if (ch == 's')
+            ans_s++;
+        else if (ch == 'h')
+            ans_h++;
+        else if (ch == '7')
+            ans_7++;
+    }
+    printf("%d %d %d\n", ans_s, ans_h, ans_7);
+
+    return 0;
 }
