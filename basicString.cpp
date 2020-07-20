@@ -33,5 +33,12 @@ int main()
             line[(int)strlen(line) - 1] = 0; // if the last character is '-', deletes it by moving the null (0) one character forward
             this_dash = true;
         }
+        else
+            this_dash = false;
+        if (!first && !prev_dash)
+            strcat(str, " "); // only append " " if this line is the second one onwards
+        first = false;
+        strcat(str, line);
+        prev_dash = this dash;
     }
 }
