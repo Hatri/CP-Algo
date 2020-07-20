@@ -9,4 +9,13 @@ class basicString {
                 return 1;
         return 0;
     }
+
+    public static void main(String[] args) throws Exception {
+        int i, pos, digits, alphas, vowels, consonants;
+        String str = "";
+
+        Boolean first = true; // technique to differentiate first line with the other lines
+        Boolean prev_dash = false, this_dash = false; // to differentiate whether the previous line contains a dash or
+                                                      // not
+    }
 }
