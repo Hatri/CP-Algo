@@ -17,5 +17,10 @@ class basicString {
         Boolean first = true; // technique to differentiate first line with the other lines
         Boolean prev_dash = false, this_dash = false; // to differentiate whether the previous line contains a dash or
                                                       // not
+
+        Scanner sc = new Scanner(new File("basic_string_in.txt"));
+        while (sc.hasNextLine()) {
+            String line = sc.nextLine();
+        }
     }
 }
