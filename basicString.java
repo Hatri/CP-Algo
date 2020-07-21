@@ -21,6 +21,10 @@ class basicString {
         Scanner sc = new Scanner(new File("basic_string_in.txt"));
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
-        }
+            if (line.equals(".......")) break;
+            if (line.charAt(line.length() - 1) == '-') {
+              line = line.substring(0, line.length() - 1); // if the last character is '-', delete it
+              this_dash = true;
+            }
     }
 }
