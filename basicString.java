@@ -26,5 +26,12 @@ class basicString {
               line = line.substring(0, line.length() - 1); // if the last character is '-', delete it
               this_dash = true;
             }
+            else
+                this_dash = false;
+            if (!first && !prev_dash)
+                str = str + " "; // only append " " if this line is the second one onwards
+            first = false;
+            str = str + line;
+            prev_dash = this_dash;
     }
 }
