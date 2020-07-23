@@ -34,4 +34,12 @@ class basicString {
             str = str + line;
             prev_dash = this_dash;
     }
+
+    char[] temp = str.toCharArray();
+    for (i = digits = alphas = vowels = consonants = 0; i < str.length(); i++) { // we can use str[i] as terminating condition as string in C++ is also terminated with NULL (0)
+      temp[i] = Character.toLowerCase(temp[i]); // make each character lower case
+      digits += Character.isDigit(temp[i]) ? 1 : 0;
+      alphas += Character.isLetter(temp[i]) ? 1 : 0;
+      vowels += isvowel(temp[i]); // already returns 1 or 0
+    }
 }
