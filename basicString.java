@@ -42,4 +42,20 @@ class basicString {
       alphas += Character.isLetter(temp[i]) ? 1 : 0;
       vowels += isvowel(temp[i]); // already returns 1 or 0
     }
+
+    consonants = alphas - vowels;
+    str = new String(temp);
+    System.out.println(str);
+    System.out.printf("%d %d %d\n", digits, vowels, consonants);
+    int hascs3233 = (str.indexOf("cs3233") != -1) ? 1 : 0;
+
+    Vector<String> tokens = new Vector<String>();
+    TreeMap<String, Integer> freq = new TreeMap<String, Integer>();
+    StringTokenizer st = new StringTokenizer(str, " .");
+    while (st.hasMoreTokens()) {
+      String p = st.nextToken();
+      tokens.add(p);
+      if (!freq.containsKey(p)) freq.put(p, 1);
+      else                      freq.put(p, freq.get(p) + 1);
+    }
 }
