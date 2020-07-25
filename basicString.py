@@ -20,3 +20,12 @@ consonants = alphas - vowels
 
 print(oneline)
 print(digits, vowels, consonants)
+
+tokens = list(filter(None, re.split(' |\\.|,', oneline)))
+freq = Counter(tokens)
+
+print(min(tokens), max(tokens))
+print(1 if 'cs3233' in oneline else 0)
+
+longline = input()
+print(longline.count('s'), longline.count('h'), longline.count('7'))
