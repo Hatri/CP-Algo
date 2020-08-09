@@ -9,3 +9,11 @@ while True:
 
     if Bills == 0 and Friends == 0:
         break
+    sum = 0
+
+    for total in range(Bills):
+        sum += int(inputs[ln])
+        ln += 1
+    print("Bill #%d costs %d: each friend should pay %d\n"
+          % (caseNo, sum, sum//F))
+    caseNo += 1
