@@ -63,6 +63,19 @@ class arrayAlgorithms {
         // without sorting, they will be ranked like this:
         for (int i = 0; i < 4; ++i)
             System.out.println(nus.get(i));
+
+        Collections.sort(nus); // sort using a comparison function
+        System.out.printf("==================\n");
+        // after sorting using ICPC rule, they will be ranked like this:
+        for (int i = 0; i < 4; ++i)
+            System.out.println(nus.get(i));
+        System.out.printf("==================\n");
+
+        int pos = Collections.binarySearch(v, 7);
+        System.out.println("Trying to search for 7 in v, found at index = " + pos);
+
+        pos = Collections.binarySearch(v, 77);
+        System.out.println("Trying to search for 77 in v, found at index = " + pos);
     }
 
 }
