@@ -26,5 +26,43 @@ class team implements Comparable<team> {
 }
 
 class arrayAlgorithms {
+    public static void main(String[] args) {
+        ArrayList<Integer> v = new ArrayList<>();
+
+        v.add(10);
+        v.add(7);
+        v.add(2);
+        v.add(15);
+        v.add(4);
+
+        // sort descending with vector
+        Collections.sort(v);
+        // if we want to modify comparison function, use the overloaded method:
+        // Collections.sort(List list, Comparator c);
+        Collections.reverse(v);
+
+        System.out.println(v);
+        System.out.printf("==================\n");
+
+        // shuffle the content again
+        Collections.shuffle(v);
+        System.out.println(v);
+        System.out.printf("==================\n");
+
+        // sort ascending
+        Collections.sort(v);
+        System.out.println(v);
+        System.out.printf("==================\n");
+
+        ArrayList<team> nus = new ArrayList<>();
+        nus.add(new team(1, 1, 10));
+        nus.add(new team(2, 3, 60));
+        nus.add(new team(3, 1, 20));
+        nus.add(new team(4, 3, 60));
+
+        // without sorting, they will be ranked like this:
+        for (int i = 0; i < 4; ++i)
+            System.out.println(nus.get(i));
+    }
 
 }
