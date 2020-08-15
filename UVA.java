@@ -19,7 +19,7 @@ public class Main {
 
             BigInteger sum = BigInteger.ZERO;
 
-            for (int i = 0; i < bills; ++i){
+            for (int i = 0; i < bills; ++i) {
                 BigInteger VV = new BigInteger(br.readLine());
                 sum = sum.add(V);
             }
@@ -28,12 +28,10 @@ public class Main {
             pw.printf(sum.toString());
             pw.printf(": each friend should pay ");
             pw.printf(sum.divide(BigInteger.valueOf(friends)).toString());
-            pw.printf("\n\n");                        
-          }
-
-          pw.close();
-
+            pw.printf("\n\n");
         }
+
+        pw.close();
 
     }
 

@@ -42,7 +42,7 @@ class basicString {
             temp[i] = Character.toLowerCase(temp[i]); // make each character lower case
             digits += Character.isDigit(temp[i]) ? 1 : 0;
             alphas += Character.isLetter(temp[i]) ? 1 : 0;
-            vowels += isvowel(temp[i]); // already returns 1 or 0
+            vowels += isVowel(temp[i]); // already returns 1 or 0
         }
 
         consonants = alphas - vowels;
