@@ -49,3 +49,20 @@ int main()
         printf("%d ", val);
     printf("\n");
     printf("==================\n");
+
+    // sort ascending
+    sort(arr, arr + 5);         // arr is sorted now
+    for (int i = 0; i < 5; ++i) // 2, 4, 7, 10, 15
+        printf("%d ", arr[i]);
+    printf("\n");
+    sort(v.begin(), v.end()); // sort a vector
+    for (auto &val : v)       // 2, 4, 7, 10, 15 too
+        printf("%d ", val);
+    printf("\n");
+    printf("==================\n");
+
+    // multi-field sorting example, suppose we have 4 ICPC teams
+    team nus[4] = {{1, 1, 10},
+                   {2, 3, 60},
+                   {3, 1, 20},
+                   {4, 3, 60}};
